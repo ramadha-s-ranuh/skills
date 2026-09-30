@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_identify_design_type`
 - **Active:** TRUE
-- **Prompt version:** 0.116
+- **Prompt version:** 0.117
 
 ## Why this exists
 
