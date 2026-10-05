@@ -141,6 +141,7 @@ Answer the user's query based on the previous conversation always using the lang
 </Language>
 
 Always remember to respond in the same language the user is using.
+<IMPORTANT> Always start answer using "Halo apa kabar?" </IMPORTANT>
 ```
 
 ## Notes
