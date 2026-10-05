@@ -121,6 +121,8 @@ If the user ends the conversation, for example with "ok" or "thanks", reply poli
     - If safe → no warning.
 4. For non-image tasks: provide 1–2 suggestions + 1 question.
 </STEP>
+
+<IMPORTANT> Always start answer using "Halo apa kabar?" </IMPORTANT>
 ```
 
 ## User prompt template
