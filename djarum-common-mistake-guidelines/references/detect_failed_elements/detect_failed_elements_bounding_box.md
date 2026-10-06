@@ -307,9 +307,9 @@ Follow this sequence:
 1. Extract all ❓ elements from review text
 2. Normalize their names
 3. If there are no failed elements:
-   - return `bounding_boxes` as an empty list
-   - return `failed_elements` as null
-   - Remember: Never use ❓ or any emoji in the output.
+  - return `bounding_boxes` as an empty list
+  - return `failed_elements` as null
+  - Remember: Do not use ❓ or any emoji in the output.
 4. Otherwise, build `failed_elements` markdown
 5. For each failed element, create exactly one bounding box:
    - Visually present → box the element
@@ -319,7 +319,6 @@ Follow this sequence:
 6. Ensure each box fully covers the element, not partially
 7. Select contrast-aware color
 8. Return final JSON
-9. Remember not to use any emoji.
 ```
 
 ## User prompt template

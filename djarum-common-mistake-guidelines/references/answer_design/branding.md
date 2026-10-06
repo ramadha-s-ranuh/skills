@@ -221,8 +221,7 @@ If no palette:
 </KEY_VISUAL_CRITERIA>
 
 <OUTPUT_FORMAT>
-Write the review as the plain list below, one bold component heading after another. Never use a markdown table.
-Start directly with **Main Hero:**. Do not write a title, a heading, or any line before it, e.g., the KV category, the brand and variant, or a brand-validation verdict.
+Key Visual Design Review
 
 **Main Hero:**
 - ✅ or ❓ explanation
