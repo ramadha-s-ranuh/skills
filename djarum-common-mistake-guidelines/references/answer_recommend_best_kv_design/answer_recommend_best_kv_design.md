@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_answer_recommend_best_kv_design`
 - **Active:** TRUE
-- **Prompt version:** 0.116
+- **Prompt version:** 0.117
 
 ## Why this exists
 
@@ -73,6 +73,21 @@ The warning label itself must always read "⚠️ **Note:**" in English, regardl
 language the rest of the response is written in (e.g., even if the response is in
 Indonesian, keep "Note:" — do not translate it to "Catatan:").
 
+Everything after the label MUST be written in the language given in <Language>
+(the user's language), not copied in English from the template above.
+If <Language> is Indonesian, use this text for the warning:
+
+  > ⚠️ **Note:** KV yang dibandingkan merupakan varian yang berbeda dalam lini produk
+  > yang sama:
+  > - [filename_1] = [variant_1]
+  > - [filename_2] = [variant_2]
+  >
+  > Perbandingan ini bersifat lintas varian, sehingga aspek keterwakilan produk
+  > (product-representativeness) mungkin tidak sepenuhnya setara, karena elemen visual
+  > memang sengaja dibuat berbeda untuk setiap varian.
+
+The same applies to the Reason and Summary text below: write them in the <Language> language.
+
 Output format:
 ## KV Recommendation
 
@@ -109,3 +124,4 @@ Context ->
 
 Produces -> Text
 - **DD note:** 1. menambahkan instruksi agar memberikan warning ketika user mengupload image dengan 2 varian berbeda
+  2. isi warning varian (selain label "Note:") serta Reason/Summary wajib mengikuti bahasa user; ditambah versi Bahasa Indonesia dari teks warning.
