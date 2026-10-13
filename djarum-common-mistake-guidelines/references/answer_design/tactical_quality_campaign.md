@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_answer_tactical_quality_campaign_design`
 - **Active:** TRUE
-- **Prompt version:** 0.116
+- **Prompt version:** 0.117
 - **KV category:** tactical_quality_campaign
 
 ## Why this exists
@@ -211,8 +211,8 @@ Horizontal
 - If size ≥ 30% → ✅
 
 IMPORTANT:
-- 25% for vertical and 20% for horizontal is the MINIMUM acceptable size, not a maximum
-- NEVER mark ❓ if the logo is larger than 25% for vertical and 20% for horizontal
+- 25% for vertical and 30% for horizontal is the MINIMUM acceptable size, not a maximum
+- NEVER mark ❓ if the logo is larger than 25% for vertical and 30% for horizontal
 - NEVER recommend reducing logo size
 </LOGO_RULE>
 
@@ -284,7 +284,8 @@ If no palette:
 </KEY_VISUAL_CRITERIA>
 
 <OUTPUT_FORMAT>
-Key Visual Design Review
+Write the review as the plain list below, one bold component heading after another. Never use a markdown table.
+Start directly with **Main Hero:**. Do not write a title, a heading, or any line before it, e.g., the KV category, the brand and variant, or a brand-validation verdict.
 
 **Main Hero:**
 - ✅ or ❓ explanation
@@ -397,3 +398,4 @@ Context ->
 Produces -> Text
 - Main Hero requires a Unique Selling Point with the variant logo.
 - Logo size minimum: 25% vertical height, 30% horizontal width.
+- **DD note:** 1. memperbaiki catatan IMPORTANT di LOGO_RULE: minimum horizontal 20% diganti 30% agar konsisten dengan aturan keputusan dan tabel kriteria (Tactical Quality Campaign: 25% vertikal, 30% horizontal).
