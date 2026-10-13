@@ -2,7 +2,7 @@
 name: djarum-common-mistake-guidelines
 description: Reference guidelines for the Djarum Common Mistake (CM) design-review pipeline - design-type classification, brand identification, KV/branding review, marketing review, bounding-box annotation, best-KV recommendation, and follow-up query handling.
 metadata:
-  version: 0.1.1
+  version: 0.1.3
 ---
 
 # Djarum Common Mistake Guidelines
@@ -73,7 +73,7 @@ Never skip Stage 1, even if the user's message strongly implies the image is a K
 
 ## Best-KV recommendation
 
-7. Once every uploaded image has been through its own stages, `skill_resource` **`references/answer_recommend_best_kv_design/answer_recommend_best_kv_design.md`**.
+7. Once every uploaded image has been through its own stages, `skill_resource` **`references/answer_recommend_best_kv_design/answer_recommend_best_kv_design.md`** (on the mixed-KV-brand pipeline, the `answer_recommend_best_kv_design_mixed_kv_brand.md` variant the instruction names).
    Where the pipeline writes a KV Review, those stages are Stages 1-4: a multi-KV turn skips Stages 5 and 6, so it neither boxes failed elements nor writes a Marketing Review for any KV.
    Where the pipeline writes a marketing review only, they are Stages 1, 2, and 6.
    Use the individual reviews to recommend the strongest KV overall.
@@ -144,6 +144,7 @@ Where a stage has more than one row, the agent instruction has already chosen wh
 | `djarum_cm_answer_marketing_design` | `references/answer_marketing_design/answer_marketing_design_djarum_kv_brand.md` | Stage 6 |
 | `djarum_cm_answer_marketing_design` (mixed-KV-brand) | `references/answer_marketing_design/answer_marketing_design_mixed_kv_brand.md` | Stage 6 |
 | `djarum_cm_answer_recommend_best_kv_design` | `references/answer_recommend_best_kv_design/answer_recommend_best_kv_design.md` | Stage 7 |
+| `djarum_cm_answer_recommend_best_kv_design` (mixed-KV-brand) | `references/answer_recommend_best_kv_design/answer_recommend_best_kv_design_mixed_kv_brand.md` | Stage 7 |
 | `djarum_cm_identify_follow_up_query_intention` | `references/identify_follow_up_query_intention/identify_follow_up_query_intention.md` | Stage 8 |
 | `djarum_cm_answer_follow_up_query` | `references/answer_follow_up_query/answer_follow_up_query.md` | Stage 8 (`basic`, and the reply after `image_generation`) |
 | `djarum_cm_get_image_generation_config` | `references/get_image_generation_config/get_image_generation_config.md` | Stage 8 (`image_generation`) |
