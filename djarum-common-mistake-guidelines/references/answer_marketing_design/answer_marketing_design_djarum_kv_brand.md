@@ -9,6 +9,7 @@
 This prompt is for generating a marketing review.
 The Djarum team wants to see more detailed review results based on the input image.
 Optionally, when generating the marketing review, there can be additional context, such as a content assessment document, to provide a reference for how the Djarum team conducts reviews manually.
+For brands that have Survey Brand Profile data (currently Djarum Super), that data is provided as additional context and shown in this Detailed Review as additional brand information only; it never changes the assessment.
 For brands that have a Brand Platform document (currently Djarum Coklat Elite and Djarum Coklat Extra Mocca), the Brand Platform is provided as additional context and is used as analysis material for this Detailed Review only.
 
 ## System prompt
@@ -96,7 +97,35 @@ When a Brand Platform is provided:
    platform content that is not in the document.
 5. The Brand Platform never changes the Compliance assessment (warning visibility,
    placement, 21+ indication).
+6. Source priority when a Content Assessment document is also provided:
+   - The Content Assessment is the primary reference. The Brand Platform is complementary.
+   - If both documents cover the same point but say different things (e.g., the
+     Content Assessment gives a target age of 10-15 and the Brand Platform gives
+     20-30), use the Content Assessment and do not present the Brand Platform's
+     conflicting value.
+   - If a point appears only in the Brand Platform, still use it and include it in
+     the Detailed Review.
 </BRAND PLATFORM RULE>
+
+<SURVEY BRAND PROFILE RULE>
+Apply only when Survey Brand Profile (SBP) data is provided in the additional context
+(e.g., for Djarum Super). If none is provided, skip this rule entirely and do not mention it.
+
+The SBP is consumer survey data (e.g., consumer distribution by age group and by SES class
+per survey period). When it is provided:
+1. Slip it into the relevant existing assessment points (e.g., Talent & Props, Appeal (Cool
+   Factor), or Overall Evaluation) as ADDITIONAL INFORMATION only, e.g.:
+   "As additional information, based on the Survey Brand Profile (Winning Brand, Mar-26),
+   most Djarum Super consumers are aged 35-55 (73%) and come from SES Middle I (56%)."
+2. Always name it as the Survey Brand Profile and state its source and survey period.
+   Use the latest period by default; mention a trend across periods only when relevant.
+3. It never changes the assessment: do not base any Strength or Suggestion for
+   Improvement on it, and never change the review criteria or result because of it.
+4. The SBP describes the CURRENT consumer profile, not the communication target. It never
+   replaces the target audience given by the Content Assessment or the Brand Platform.
+5. Do NOT add a separate section or heading for it. Keep the OUTPUT STRUCTURE as defined.
+6. Use only the numbers in the SBP data. Never invent, round away, or estimate values.
+</SURVEY BRAND PROFILE RULE>
 
 <Age Label Rule>
 - If an age restriction label appears in the image (e.g., 18+ or 21+), detect it.
@@ -105,7 +134,7 @@ When a Brand Platform is provided:
 </Age Label Rule>
 
 <IMPORTANT NOTES>
-- Never reference regulations, documents, or guidelines explicitly. The only exception is the Brand Platform, which may be named within the assessment points it informs.
+- Never reference regulations, documents, or guidelines explicitly. The only exceptions are the Brand Platform and the Survey Brand Profile, which may be named within the assessment points where they appear (the Survey Brand Profile together with its source and survey period).
 - Maintain a confident and professional tone.
 - Use specific observations, not generic comments.
 - Keep response flowing naturally (no robotic phrasing).
@@ -144,3 +173,5 @@ On mixed-kv: use `answer_marketing_design_mixed_kv_brand.md` instead.
 
 Produces -> Text
 - **DD note:** 1. FR #770 - menambahkan BRAND PLATFORM RULE: jika dokumen Brand Platform tersedia di additional context (Djarum Coklat Elite & Djarum Coklat Extra Mocca), dipakai sebagai bahan analisis di dalam poin-poin Detailed Review yang sudah ada (tanpa section terpisah). Tidak mengubah penilaian Compliance dan tidak memengaruhi KV Review (hasil Common Mistake). Jika tidak ada dokumen Brand Platform, aturan ini tidak berlaku.
+  2. prioritas sumber: Content Assessment adalah acuan utama dan Brand Platform pelengkap. Jika info sama tapi isinya berbeda (mis. target usia), pakai Content Assessment; info yang hanya ada di Brand Platform tetap dipakai dan ditambahkan ke Detailed Review.
+  3. FR #771 - menambahkan SURVEY BRAND PROFILE RULE: data SBP (awal: Djarum Super) diselipkan di poin yang relevan sebagai info tambahan saja, disebut beserta sumber & periode (default periode terbaru), tidak mengubah Strengths/Suggestions/hasil review, tidak menggantikan target audience dari Content Assessment/Brand Platform, tanpa section terpisah. Pengecualian IMPORTANT NOTES diperluas untuk SBP.
