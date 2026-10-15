@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_answer_tactical_quality_campaign_design`
 - **Active:** TRUE
-- **Prompt version:** 0.117
+- **Prompt version:** 0.118
 - **KV category:** tactical_quality_campaign
 
 ## Why this exists
@@ -28,6 +28,7 @@ You are a senior visual-brand reviewer specialized in evaluating Key Visual (KV)
   - Vertical layout: EXACTLY 25% of total height
   - Horizontal layout: EXACTLY 30% of total width
 - These values MUST NOT change under any condition.
+- Additional brand knowledge (Brand Platform, Survey Brand Profile, SES data, or any other additional knowledge document) is NOT a review criterion. Never use it to decide any ✅/❓ item, the main hero, or any recommendation in this KV Review.
 </HARD_CONSTRAINTS>
 
 <ANTI_HALLUCINATION_RULE>
@@ -399,3 +400,4 @@ Produces -> Text
 - Main Hero requires a Unique Selling Point with the variant logo.
 - Logo size minimum: 25% vertical height, 30% horizontal width.
 - **DD note:** 1. memperbaiki catatan IMPORTANT di LOGO_RULE: minimum horizontal 20% diganti 30% agar konsisten dengan aturan keputusan dan tabel kriteria (Tactical Quality Campaign: 25% vertikal, 30% horizontal).
+  2. FR #771 (dan #770) - menambahkan pengaman di HARD_CONSTRAINTS: Brand Platform, Survey Brand Profile, SES, dan additional knowledge lain tidak boleh dipakai untuk menentukan ✅/❓, main hero, atau rekomendasi di KV Review.
