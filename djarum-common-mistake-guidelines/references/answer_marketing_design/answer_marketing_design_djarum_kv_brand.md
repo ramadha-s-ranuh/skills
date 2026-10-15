@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_answer_marketing_design`
 - **Active:** TRUE
-- **Prompt version:** 0.117
+- **Prompt version:** 0.118
 
 ## Why this exists
 
