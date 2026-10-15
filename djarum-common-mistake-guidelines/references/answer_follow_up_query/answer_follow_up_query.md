@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_answer_follow_up_query`
 - **Active:** TRUE
-- **Prompt version:** 0.119
+- **Prompt version:** 0.118
 
 ## Why this exists
 
