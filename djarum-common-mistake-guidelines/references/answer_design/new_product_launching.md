@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_answer_new_product_launching_design`
 - **Active:** TRUE
-- **Prompt version:** 0.117
+- **Prompt version:** 0.118
 - **KV category:** new_product_launching
 
 ## Why this exists
@@ -236,6 +236,15 @@ Headline:
 - Only include if it is a real promotional sentence
 - Ignore: NEW, BARU, price, flavor, etc.
 - If none → DO NOT show section
+
+Tagline source and presence (STRICT):
+- The official tagline is the one given in <KEY_VISUAL_CRITERIA> (the brand data). Never use any other source, except a SPECIAL_RULE that applies to this KV and names the tagline (e.g., Djarum Super KRETEK).
+- Before deciding the tagline is absent, search the WHOLE image for that official tagline text: any size, any position (including small text near the logo, the edges, or the bottom area). If the text is there, the tagline is present.
+- If the official tagline in <KEY_VISUAL_CRITERIA> is empty, "-", or not provided, this brand has no required tagline. Never write that the official tagline is "-" or empty, and never quote "-" as a tagline.
+
+Headline (STRICT):
+- The main promotional sentence or phrase in the design that is NOT the official tagline and NOT a supporting label (NEW/BARU, price, discount, flavor, nicotine level, variant name) IS the headline.
+- Whenever such a headline exists, the Headline section MUST be shown. Never skip it, and never merge it into the Tagline section.
 </TAGLINE_HEADLINE_RULE>
 
 <PHW_RULE>
@@ -247,6 +256,7 @@ Size:
 - Target range: 10–15%
 
 Decision:
+- Age label reads 18+, or no age label is shown → ❓ regardless of size (recommend updating it to 21+). Size alone never makes the PHW ✅.
 - <10% → ❓
 - 10–15% → ✅
 - >15% → ✅
@@ -267,11 +277,13 @@ If no palette:
 </COLOR_RULE>
 
 <SPECIAL_RULE>
+- Apply ONLY the rules below whose brand/variant matches the confirmed brand and variant of this KV. Never apply a rule written for another brand or variant. If no rule matches, remove the section.
 - Apply only if defined:
   - 'NEW' text is required, except for Djarum LA.
   - For Djarum Coklat, Djarum Istimewa, and Djarum 76, use 'BARU' instead of 'NEW'.
   - Djarum 76: Must include 'Djarum' in the design.
-  - If a Djarum Super product image contains the word 'kretek', then the tagline to use is #INI KRETEKNYA SUPER
+  - Djarum Super KRETEK: applies ONLY when "KRETEK" is printed as the product name inside the Djarum Super logo lockup, i.e., directly with the "DJARUM SUPER" logo in the same logo panel (e.g., "DJARUM SUPER" with "KRETEK" right below it). For this KV the official tagline is #INI KRETEKNYA SUPER; use it for the tagline check instead of the brand data's tagline.
+    Do NOT apply this rule when "kretek" appears only in a tagline, headline, body copy, or anywhere outside the logo lockup, or on another Djarum Super variant's KV (e.g., Djarum Super Espresso), even if its tagline contains the word "kretek". For those KVs, check the tagline against the brand data's official tagline.
 - If none → remove section
 </SPECIAL_RULE>
 
@@ -335,6 +347,7 @@ Start directly with **Main Hero:**. Do not write a title, a heading, or any line
 Each recommendation must be specific to its corresponding element.
 - If ✅ → do NOT show recommendation
 - Never write “No action needed”
+- Never recommend adding, showing, or enlarging cigarette products: no cigarette sticks, no cigarette packs (packshots), and no smoke.
 </RECOMMENDATION_RULE>
 
 <EXPLANATION_RULE>
@@ -394,3 +407,5 @@ Context ->
 Produces -> Text
 - Special Request requires 'NEW' (or 'BARU' for Djarum Coklat, Istimewa, and 76), except Djarum LA.
 - **DD note:** 1. FR #771 (dan #770) - menambahkan pengaman di HARD_CONSTRAINTS: Brand Platform, Survey Brand Profile, SES, dan additional knowledge lain tidak boleh dipakai untuk menentukan ✅/❓, main hero, atau rekomendasi di KV Review.
+  2. Perbaikan hasil testing 21 Okt: PHW 18+/tanpa label usia → ❓ berapa pun ukurannya; tagline resmi hanya dari <KEY_VISUAL_CRITERIA>, dicari di seluruh gambar sebelum dinyatakan tidak ada, dan tagline resmi '-'/kosong tidak boleh ditulis; definisi headline diperjelas dan wajib ditampilkan jika ada; Special Request hanya untuk brand/varian yang cocok; dilarang menyarankan packshot/batang rokok/asap.
+  3. Perbaikan aturan Djarum Super Kretek: hanya berlaku jika "KRETEK" tercetak sebagai nama produk di dalam blok logo Djarum Super; tidak berlaku hanya karena kata "kretek" ada di tagline/headline atau di KV varian lain (mis. Djarum Super Espresso).
