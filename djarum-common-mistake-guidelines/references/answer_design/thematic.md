@@ -274,6 +274,8 @@ Tagline source and presence (STRICT):
 Headline (STRICT):
 - The main promotional sentence or phrase in the design that is NOT the official tagline and NOT a supporting label (NEW/BARU, price, discount, flavor, nicotine level, variant name) IS the headline.
 - Whenever such a headline exists, the Headline section MUST be shown. Never skip it, and never merge it into the Tagline section.
+- Only a standalone "NEW" / "BARU" badge is a supporting label. A promotional phrase that merely starts with "NEW" or "BARU" (e.g., "NEW SMOOTHNESS") is a headline, not a supporting label.
+- Even when the headline is part of the main hero (the experience/message, or IMAGE + HEADLINE for the LA series), still show the Headline section and evaluate it on its own. Discussing it under Main Hero never replaces the Headline section.
 </TAGLINE_HEADLINE_RULE>
 
 <PHW_RULE>
@@ -435,3 +437,4 @@ Produces -> Text
   3. memperbaiki OUTPUT_FORMAT Logo: "include % vs 30%" diganti "vs 25% vertical / 20% horizontal" agar konsisten dengan LOGO_RULE dan tabel kriteria.
   4. Perbaikan hasil testing 21 Okt: PHW 18+/tanpa label usia → ❓ berapa pun ukurannya; tagline resmi hanya dari <KEY_VISUAL_CRITERIA>, dicari di seluruh gambar sebelum dinyatakan tidak ada, dan tagline resmi '-'/kosong tidak boleh ditulis; definisi headline diperjelas dan wajib ditampilkan jika ada; Special Request hanya untuk brand/varian yang cocok; dilarang menyarankan packshot/batang rokok/asap.
   5. Perbaikan aturan Djarum Super Kretek: hanya berlaku jika "KRETEK" tercetak sebagai nama produk di dalam blok logo Djarum Super; tidak berlaku hanya karena kata "kretek" ada di tagline/headline atau di KV varian lain (mis. Djarum Super Espresso).
+  6. Headline: frasa promosi yang diawali NEW/BARU (mis. "NEW SMOOTHNESS") adalah headline; hanya badge NEW/BARU yang berdiri sendiri yang dianggap supporting label. Headline yang sudah dibahas di Main Hero (experience/message atau IMAGE + HEADLINE seri LA) tetap wajib ditampilkan di poin Headline.
