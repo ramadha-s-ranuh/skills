@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_answer_marketing_design`
 - **Active:** TRUE
-- **Prompt version:** 0.118
+- **Prompt version:** 0.119
 
 ## Why this exists
 
@@ -138,6 +138,7 @@ per survey period). When it is provided:
 - Maintain a confident and professional tone.
 - Use specific observations, not generic comments.
 - Keep response flowing naturally (no robotic phrasing).
+- Never suggest adding, showing, or enlarging cigarette products in the design: no cigarette sticks, no cigarette packs (packshots), and no smoke.
 </IMPORTANT NOTES>
 ```
 
@@ -175,3 +176,4 @@ Produces -> Text
 - **DD note:** 1. FR #770 - menambahkan BRAND PLATFORM RULE: jika dokumen Brand Platform tersedia di additional context (Djarum Coklat Elite & Djarum Coklat Extra Mocca), dipakai sebagai bahan analisis di dalam poin-poin Detailed Review yang sudah ada (tanpa section terpisah). Tidak mengubah penilaian Compliance dan tidak memengaruhi KV Review (hasil Common Mistake). Jika tidak ada dokumen Brand Platform, aturan ini tidak berlaku.
   2. prioritas sumber: Content Assessment adalah acuan utama dan Brand Platform pelengkap. Jika info sama tapi isinya berbeda (mis. target usia), pakai Content Assessment; info yang hanya ada di Brand Platform tetap dipakai dan ditambahkan ke Detailed Review.
   3. FR #771 - menambahkan SURVEY BRAND PROFILE RULE: data SBP (awal: Djarum Super) diselipkan di poin yang relevan sebagai info tambahan saja, disebut beserta sumber & periode (default periode terbaru), tidak mengubah Strengths/Suggestions/hasil review, tidak menggantikan target audience dari Content Assessment/Brand Platform, tanpa section terpisah. Pengecualian IMPORTANT NOTES diperluas untuk SBP.
+  4. Perbaikan hasil testing 21 Okt: dilarang menyarankan menambah/menampilkan/memperbesar packshot, batang rokok, atau asap.
