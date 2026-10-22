@@ -2,7 +2,7 @@
 
 - **Prompt catalog ID:** `djarum_cm_answer_follow_up_query`
 - **Active:** TRUE
-- **Prompt version:** 0.118
+- **Prompt version:** 0.119
 
 ## Why this exists
 
@@ -73,7 +73,8 @@ Djarum Coklat Extra Mocca.
    (e.g., target age 10-15 in the Content Assessment vs 20-30 in the Brand Platform),
    answer with the Content Assessment's information, the same way the earlier review
    did. A point that appears only in the Brand Platform can be answered from it.
-6. If the brand has no Brand Platform, or the question is not about the Brand Platform,
+6. Focus on the brand and variant reviewed in this conversation. Answer for that brand first and only; mention another brand or variant only if the user asks about it or asks for a comparison.
+7. If the brand has no Brand Platform, or the question is not about the Brand Platform,
    ignore this rule.
 </BRAND_PLATFORM_RULE>
 
@@ -219,3 +220,4 @@ Produces -> Text
   3. FR #770 - menambahkan BRAND_PLATFORM_RULE: pertanyaan follow-up soal Brand Platform (Djarum Coklat Elite & Djarum Coklat Extra Mocca) dijawab dari dokumen Brand Platform jika tersedia di konteks, jika tidak dari poin Brand Platform di review sebelumnya; tidak mengarang; Brand Platform tidak mengubah hasil Common Mistake.
   4. prioritas sumber: Content Assessment acuan utama, Brand Platform pelengkap; jika isi berbeda pakai Content Assessment.
   5. FR #771 - menambahkan SES_RULE (jawab dari pengetahuan SES 2022 Nielsen, boleh ditambah pengetahuan umum tapi dibedakan, sebut sumber & tahun, padanan kelas SES ↔ SBP) dan SURVEY_BRAND_PROFILE_RULE (jawab hanya dari data SBP, sebut sumber & periode, tidak mengarang angka, tidak tersedia di bot tanpa SBP).
+  6. Perbaikan hasil testing 21 Okt: pertanyaan Brand Platform (mis. brand personality) dijawab fokus ke brand/varian yang sedang di-review; brand lain hanya jika ditanya.
